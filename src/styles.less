@@ -1,0 +1,59 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, -30px, 0); }
+}
+
+body {
+    align-items: center;
+    background-color: #FEDBD0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 200px;
+    
+    h1, .loader {
+        animation-name: fadeIn;
+        animation-duration: 5.5s;
+        margin: 0;
+        color: #442C2E;
+        flex-grow: 1;
+        font-family: 'Raleway', sans-serif;
+        font-size: 10em;
+        text-align: center;
+    }
+    
+    .circle {
+      height: 25px;
+      width: 25px;
+      background-color: #442C2E;
+      border-radius: 50%;
+      display: inline-block;
+      
+      &-1 {
+        animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5);
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+        
+      &-2 {
+        animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5);
+        animation-delay: 0.25s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+        
+      &-3 {
+        animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5);
+        animation-delay: 0.5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+    }
+}
+
